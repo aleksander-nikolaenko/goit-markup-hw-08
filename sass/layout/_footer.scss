@@ -1,0 +1,130 @@
+.footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: var(--secondary-background-color);
+  &__container {
+    margin-right: auto;
+    margin-left: auto;
+    width: 1200px;
+    display: flex;
+    align-items: baseline;
+  }
+
+  &__logo {
+    display: block;
+    margin-bottom: 20px;
+    color: #ffffff;
+  }
+
+  &__btn {
+    margin-left: 12px;
+    margin-right: 0px;
+    padding-left: 29px;
+    padding-right: 62px;
+
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+      box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    &:hover,
+    &:focus {
+      background-color: #188ce8;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    }
+  }
+}
+
+.footer-left {
+  &__content {
+    min-width: 231px;
+    margin-right: 70px;
+  }
+}
+
+.footer-adress {
+  &__content {
+    margin-bottom: 9px;
+  }
+
+  &__text {
+    font-style: normal;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    color: #ffffff;
+  }
+}
+.footer-contacts-list {
+  &__item:not(:last-child) {
+    margin-bottom: 9px;
+  }
+
+  &__link {
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    color: rgba(255, 255, 255, 0.6);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+      color: var(--accent-color);
+    }
+  }
+}
+
+.footer-middle {
+  &__content {
+    min-width: 206px;
+    margin-right: 93px;
+  }
+
+  &__text {
+    margin-bottom: 20px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+
+    color: #ffffff;
+  }
+}
+.footer-right {
+  flex-grow: 1;
+}
+.footer-form {
+  &__text {
+    margin-bottom: 20px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+
+    color: #ffffff;
+  }
+}
+.footer-form-block {
+  display: flex;
+  justify-content: right;
+}
+.input-email {
+  width: 100%;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 16px;
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  outline: none;
+  color: rgba(255, 255, 255, 0.6);
+  &::placeholder {
+    font-size: 16px;
+    line-height: 1.25;
+    letter-spacing: 0.03em;
+    color: rgba(255, 255, 255, 0.6);
+  }
+}
+.footer-button-wrapper {
+  display: block;
+  position: relative;
+}

@@ -1,0 +1,51 @@
+.features {
+  &__container {
+    margin-right: auto;
+    margin-left: auto;
+    width: 1200px;
+  }
+}
+.features-list {
+  &__content {
+    display: flex;
+    margin-left: calc(-1 * var(--primary-gap));
+    margin-top: calc(-1 * var(--primary-gap));
+  }
+
+  &__item {
+    flex-basis: calc(100% / 4 - var(--primary-gap));
+    margin-left: var(--primary-gap);
+    margin-top: var(--primary-gap);
+  }
+
+  &__title {
+    margin-top: 30px;
+    margin-bottom: 10px;
+
+    color: var(--title-color);
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    text-transform: uppercase;
+  }
+
+  &__text {
+    color: var(--text-color);
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+  }
+}
+.features-list-icon {
+  padding-top: 25px;
+  padding-bottom: 25px;
+  padding-left: 100px;
+  padding-right: 100px;
+  background-color: #f5f4fa;
+  &__antenna,
+  &__clock,
+  &__diagram,
+  &__astronaut {
+    display: block;
+  }
+}
