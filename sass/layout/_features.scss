@@ -2,20 +2,39 @@
   &__container {
     margin-right: auto;
     margin-left: auto;
-    width: 1200px;
+    width: 100%;
+    @media screen and (min-width: 480px) {
+      max-width: 480px;
+    }
+    @media screen and (min-width: 768px) {
+      max-width: 768px;
+    }
+    @media screen and (min-width: 1200px) {
+      max-width: 1200px;
+    }
   }
 }
 .features-list {
   &__content {
-    display: flex;
-    margin-left: calc(-1 * var(--primary-gap));
-    margin-top: calc(-1 * var(--primary-gap));
+    @media screen and (min-width: 768px) {
+      display: flex;
+      flex-wrap: wrap;
+      margin-left: calc(-1 * var(--primary-gap));
+      margin-top: calc(-1 * var(--primary-gap));
+    }
   }
 
   &__item {
-    flex-basis: calc(100% / 4 - var(--primary-gap));
-    margin-left: var(--primary-gap);
-    margin-top: var(--primary-gap);
+    @media screen and (min-width: 768px) {
+      flex-basis: calc(100% / 2 - var(--primary-gap));
+      margin-left: var(--primary-gap);
+      margin-top: var(--primary-gap);
+    }
+    @media screen and (min-width: 1200px) {
+      flex-basis: calc(100% / 4 - var(--primary-gap));
+      margin-left: var(--primary-gap);
+      margin-top: var(--primary-gap);
+    }
   }
 
   &__title {
@@ -26,7 +45,11 @@
     font-weight: 700;
     font-size: 14px;
     line-height: 1.14;
+    text-align: center;
     text-transform: uppercase;
+    @media screen and (min-width: 768px) {
+      text-align: left;
+    }
   }
 
   &__text {
@@ -39,13 +62,13 @@
 .features-list-icon {
   padding-top: 25px;
   padding-bottom: 25px;
-  padding-left: 100px;
-  padding-right: 100px;
   background-color: #f5f4fa;
   &__antenna,
   &__clock,
   &__diagram,
   &__astronaut {
+    margin-left: auto;
+    margin-right: auto;
     display: block;
   }
 }

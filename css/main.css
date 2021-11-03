@@ -87,8 +87,15 @@ img {
 }
 
 .section {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+@media screen and (min-width: 1200px) {
+  .section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 .section-title {
@@ -548,19 +555,50 @@ img {
 .features__container {
   margin-right: auto;
   margin-left: auto;
-  width: 1200px;
+  width: 100%;
 }
 
-.features-list__content {
-  display: flex;
-  margin-left: calc(-1 * var(--primary-gap));
-  margin-top: calc(-1 * var(--primary-gap));
+@media screen and (min-width: 480px) {
+  .features__container {
+    max-width: 480px;
+  }
 }
 
-.features-list__item {
-  flex-basis: calc(100% / 4 - var(--primary-gap));
-  margin-left: var(--primary-gap);
-  margin-top: var(--primary-gap);
+@media screen and (min-width: 768px) {
+  .features__container {
+    max-width: 768px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .features__container {
+    max-width: 1200px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .features-list__content {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: calc(-1 * var(--primary-gap));
+    margin-top: calc(-1 * var(--primary-gap));
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .features-list__item {
+    flex-basis: calc(100% / 2 - var(--primary-gap));
+    margin-left: var(--primary-gap);
+    margin-top: var(--primary-gap);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .features-list__item {
+    flex-basis: calc(100% / 4 - var(--primary-gap));
+    margin-left: var(--primary-gap);
+    margin-top: var(--primary-gap);
+  }
 }
 
 .features-list__title {
@@ -570,7 +608,14 @@ img {
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
+  text-align: center;
   text-transform: uppercase;
+}
+
+@media screen and (min-width: 768px) {
+  .features-list__title {
+    text-align: left;
+  }
 }
 
 .features-list__text {
@@ -583,12 +628,12 @@ img {
 .features-list-icon {
   padding-top: 25px;
   padding-bottom: 25px;
-  padding-left: 100px;
-  padding-right: 100px;
   background-color: #f5f4fa;
 }
 
 .features-list-icon__antenna, .features-list-icon__clock, .features-list-icon__diagram, .features-list-icon__astronaut {
+  margin-left: auto;
+  margin-right: auto;
   display: block;
 }
 
