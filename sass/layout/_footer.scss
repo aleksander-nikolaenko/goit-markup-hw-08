@@ -5,19 +5,35 @@
   &__container {
     margin-right: auto;
     margin-left: auto;
-    width: 1200px;
-    display: flex;
-    align-items: baseline;
+    width: 100%;
+    @media screen and (min-width: 480px) {
+      max-width: 480px;
+    }
+    @media screen and (min-width: 768px) {
+      max-width: 768px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+      justify-content: center;
+    }
+    @media screen and (min-width: 1200px) {
+      max-width: 1200px;
+    }
   }
 
   &__logo {
     display: block;
     margin-bottom: 20px;
     color: #ffffff;
+    text-align: center;
+    @media screen and (min-width: 1200px) {
+      font-size: 26px;
+      line-height: 1.19;
+      text-align: left;
+    }
   }
 
   &__btn {
-    margin-left: 12px;
     margin-right: 0px;
     padding-left: 29px;
     padding-right: 62px;
@@ -34,14 +50,25 @@
 
 .footer-left {
   &__content {
-    min-width: 231px;
-    margin-right: 70px;
+    margin-bottom: 60px;
+    @media screen and (min-width: 768px) {
+      flex-basis: content;
+      margin-right: 165px;
+    }
+    @media screen and (min-width: 1200px) {
+      margin-bottom: 0px;
+      flex-basis: content;
+      margin-right: 70px;
+    }
   }
 }
 
 .footer-adress {
   &__content {
-    margin-bottom: 9px;
+    margin-bottom: 8px;
+    @media screen and (min-width: 1200px) {
+      margin-bottom: 9px;
+    }
   }
 
   &__text {
@@ -49,12 +76,22 @@
     font-size: 14px;
     line-height: 1.71;
     letter-spacing: 0.03em;
+    text-align: center;
     color: #ffffff;
   }
 }
 .footer-contacts-list {
+  &__item {
+    text-align: center;
+    @media screen and (min-width: 1200px) {
+      text-align: left;
+    }
+  }
   &__item:not(:last-child) {
-    margin-bottom: 9px;
+    margin-bottom: 8px;
+    @media screen and (min-width: 1200px) {
+      margin-bottom: 9px;
+    }
   }
 
   &__link {
@@ -73,8 +110,11 @@
 
 .footer-middle {
   &__content {
-    min-width: 206px;
-    margin-right: 93px;
+    margin-bottom: 60px;
+    @media screen and (min-width: 1200px) {
+      margin-bottom: 0px;
+      margin-right: 93px;
+    }
   }
 
   &__text {
@@ -83,9 +123,13 @@
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.03em;
+    text-align: center;
     text-transform: uppercase;
 
     color: #ffffff;
+    @media screen and (min-width: 1200px) {
+      text-align: left;
+    }
   }
 }
 .footer-right {
@@ -98,33 +142,50 @@
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.03em;
+    text-align: center;
     text-transform: uppercase;
 
     color: #ffffff;
+    @media screen and (min-width: 1200px) {
+      text-align: left;
+    }
   }
 }
 .footer-form-block {
-  display: flex;
-  justify-content: right;
-}
-.input-email {
-  width: 100%;
-  padding-top: 15px;
-  padding-bottom: 15px;
-  padding-left: 16px;
-  background-color: transparent;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  border-radius: 4px;
-  outline: none;
-  color: rgba(255, 255, 255, 0.6);
-  &::placeholder {
-    font-size: 16px;
-    line-height: 1.25;
-    letter-spacing: 0.03em;
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    justify-content: right;
+  }
+
+  &__email {
+    width: 100%;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 16px;
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+    outline: none;
     color: rgba(255, 255, 255, 0.6);
+    &::placeholder {
+      font-size: 16px;
+      line-height: 1.25;
+      letter-spacing: 0.03em;
+      color: rgba(255, 255, 255, 0.6);
+    }
+    @media screen and (min-width: 1200px) {
+      margin-right: 12px;
+    }
   }
 }
 .footer-button-wrapper {
+  margin-top: 20px;
+  margin-right: auto;
+  margin-left: auto;
   display: block;
   position: relative;
+  width: 200px;
+  @media screen and (min-width: 1200px) {
+    margin-top: 0px;
+  }
 }
