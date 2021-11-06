@@ -3,10 +3,13 @@
     margin-bottom: 12px;
     font-weight: 700;
     font-size: 20px;
-    line-height: 1.15;
+    line-height: 1.5;
     text-align: center;
     letter-spacing: 0.03em;
     color: var(--title-color);
+    @media screen and (min-width: 1200px) {
+      line-height: 1.15;
+    }
   }
 }
 .modal-form {
@@ -76,16 +79,25 @@
   }
 
   &__check-text {
-    margin-top: 20px;
-    margin-bottom: 30px;
-    font-size: 14px;
-    line-height: 1.71;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    font-size: 2.35vw;
+    line-height: 1.17;
     letter-spacing: 0.03em;
     color: var(--text-color);
     display: flex;
     position: relative;
     align-items: center;
     justify-content: center;
+    @media screen and (min-width: 480px) {
+      margin-top: 20px;
+      margin-bottom: 30px;
+      font-size: 12px;
+    }
+    @media screen and (min-width: 1200px) {
+      font-size: 14px;
+      line-height: 1.71;
+    }
   }
   &__icon-place {
     width: 16px;
@@ -104,16 +116,27 @@
   }
 
   &__link {
-    margin-bottom: 5px;
+    @media screen and (min-width: 480px) {
+      margin-bottom: 2px;
+    }
+    @media screen and (min-width: 1200px) {
+      margin-bottom: 5px;
+    }
+
     color: var(--accent-color);
     &::after {
-      content: '';
+      content: "";
       width: 100%;
       height: 1px;
-      margin-top: -5px;
       background-color: var(--accent-color);
       display: block;
       border-bottom: 1px solid var(--accent-color);
+      @media screen and (min-width: 480px) {
+        margin-top: -2px;
+      }
+      @media screen and (min-width: 1200px) {
+        margin-top: -5px;
+      }
     }
   }
 
