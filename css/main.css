@@ -1498,15 +1498,17 @@ img {
   background-color: var(--accent-color);
 }
 
-.works-list__content {
-  display: flex;
-  flex-wrap: wrap;
-  margin-left: calc(-1 * var(--primary-gap));
-  margin-top: calc(-1 * var(--primary-gap));
+@media screen and (min-width: 768px) {
+  .works-list__content {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: calc(-1 * var(--primary-gap));
+    margin-top: calc(-1 * var(--primary-gap));
+  }
 }
 
-.works-list__item:not(:last-child) {
-  margin-bottom: 30px;
+.works-list__item:not(:first-child) {
+  margin-top: 30px;
 }
 
 @media screen and (min-width: 768px) {
