@@ -4,13 +4,13 @@
     margin-right: auto;
     margin-left: auto;
     width: 1200px;
-    @media screen and (max-width: 1199px) {
-      display: none;
-    }
   }
 
   &__title {
     margin-bottom: 50px;
+  }
+  @media screen and (max-width: 1199px) {
+    display: none;
   }
 }
 

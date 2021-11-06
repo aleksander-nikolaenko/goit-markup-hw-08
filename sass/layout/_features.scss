@@ -25,6 +25,9 @@
   }
 
   &__item {
+    &:not(:first-child) {
+      margin-top: 30px;
+    }
     @media screen and (min-width: 768px) {
       flex-basis: calc(100% / 2 - var(--primary-gap));
       margin-left: var(--primary-gap);

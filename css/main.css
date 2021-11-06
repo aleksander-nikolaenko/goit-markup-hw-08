@@ -557,6 +557,7 @@ img {
 
 .header-contacts-list__link {
   display: flex;
+  align-items: flex-end;
   position: relative;
   color: var(--text-color);
   font-weight: 500;
@@ -570,7 +571,14 @@ img {
   color: var(--accent-color);
 }
 
+@media screen and (min-width: 1200px) {
+  .header-contacts-list__link {
+    font-size: 14px;
+  }
+}
+
 .header-contacts-list__icon {
+  display: block;
   margin-top: auto;
   margin-bottom: auto;
   margin-right: 8px;
@@ -579,6 +587,12 @@ img {
 
 .header-contacts-list__icon:hover, .header-contacts-list__icon:focus {
   fill: var(--accent-color);
+}
+
+@media screen and (min-width: 1200px) {
+  .header-contacts-list__icon {
+    margin-right: 10px;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -890,6 +904,10 @@ img {
   }
 }
 
+.features-list__item:not(:first-child) {
+  margin-top: 30px;
+}
+
 @media screen and (min-width: 768px) {
   .features-list__item {
     flex-basis: calc(100% / 2 - var(--primary-gap));
@@ -952,14 +970,14 @@ img {
   width: 1200px;
 }
 
-@media screen and (max-width: 1199px) {
-  .about__container {
-    display: none;
-  }
-}
-
 .about__title {
   margin-bottom: 50px;
+}
+
+@media screen and (max-width: 1199px) {
+  .about {
+    display: none;
+  }
 }
 
 .about-list {
@@ -1260,6 +1278,7 @@ img {
 @media screen and (min-width: 1200px) {
   .footer-adress__content {
     margin-bottom: 9px;
+    padding-right: 15px;
   }
 }
 
@@ -1361,10 +1380,15 @@ img {
 }
 
 .footer-form-block__email {
+  display: block;
   width: 100%;
+  max-width: 450px;
   padding-top: 15px;
   padding-bottom: 15px;
   padding-left: 16px;
+  margin-bottom: 20px;
+  margin-right: auto;
+  margin-left: auto;
   background-color: transparent;
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 4px;
@@ -1381,12 +1405,14 @@ img {
 
 @media screen and (min-width: 1200px) {
   .footer-form-block__email {
+    margin-bottom: 0px;
+    margin-left: 0;
     margin-right: 12px;
+    max-width: 358px;
   }
 }
 
-.footer-button-wrapper {
-  margin-top: 20px;
+.footer-button-wrapper__content {
   margin-right: auto;
   margin-left: auto;
   display: block;
@@ -1395,7 +1421,7 @@ img {
 }
 
 @media screen and (min-width: 1200px) {
-  .footer-button-wrapper {
+  .footer-button-wrapper__content {
     margin-top: 0px;
   }
 }
@@ -1407,6 +1433,12 @@ img {
 @media screen and (min-width: 768px) {
   .works {
     padding-top: 60px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .works {
+    padding-top: 94px;
   }
 }
 
