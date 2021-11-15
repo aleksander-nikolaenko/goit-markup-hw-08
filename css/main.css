@@ -28,6 +28,10 @@ body {
   font-style: normal;
 }
 
+body.no-scroll {
+  overflow: hidden;
+}
+
 h1,
 h2,
 h3,
